@@ -1,5 +1,6 @@
 import React from "react";
 import "./Main.css";
+import Dwarf from "./components/Dwarf";
 
 export default function Main() {
   const [dwarf, setDwarf] = React.useState([
@@ -9,12 +10,27 @@ export default function Main() {
     "scout",
   ]);
 
+  const [currDwarf, setCurrDwarf] = React.useState([]);
+
   const updateState = (d) => {
     if (dwarf.includes(d)) {
       setDwarf(dwarf.filter((item) => item !== d));
     } else {
       setDwarf([...dwarf, d]);
     }
+  };
+
+  const getDwarfInfo = async () => {
+    // console.log(dwarf);
+
+    if (dwarf.length === 0) {
+      return;
+    }
+    let idx = Math.floor(Math.random() * dwarf.length);
+
+    const res = await fetch(`http://localhost:5050/${dwarf[idx]}`);
+    const data = await res.json();
+    setCurrDwarf(data);
   };
 
   return (
@@ -43,7 +59,8 @@ export default function Main() {
         alt="gunner_icon"
         onClick={() => updateState("gunner")}
       />
-      <button onClick={() => console.log(dwarf)}>Generate Loadout</button>
+      <button onClick={getDwarfInfo}>Generate Loadout</button>
+      {currDwarf.length > 0 && <Dwarf dwarfInfo={currDwarf} />}
     </div>
   );
 }

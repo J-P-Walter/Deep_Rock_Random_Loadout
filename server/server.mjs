@@ -12,5 +12,5 @@ app.use(express.json());
 app.use("/", records);
 
 app.listen(PORT, () => {
-  console.log("server runnign");
+  console.log(`server running on ${PORT}`);
 });
