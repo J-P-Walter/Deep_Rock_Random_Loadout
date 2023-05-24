@@ -21,8 +21,6 @@ export default function Main() {
   };
 
   const getDwarfInfo = async () => {
-    // console.log(dwarf);
-
     if (dwarf.length === 0) {
       return;
     }
