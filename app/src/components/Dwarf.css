@@ -1,0 +1,18 @@
+.dwarfMain {
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  font-family: "Carbon Regular";
+}
+.side {
+  /* border: 1px;
+  border-color: red;
+  border-style: solid; */
+  width: 40vw;
+}
+
+.equipment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1vw;
+}

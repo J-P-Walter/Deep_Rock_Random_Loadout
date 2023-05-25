@@ -1,0 +1,24 @@
+* {
+  color: white;
+}
+.equipmentBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+.equipmentHeader {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+}
+.equipmentHeader img {
+  width: 250px;
+  height: auto;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}

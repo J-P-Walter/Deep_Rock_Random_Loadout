@@ -1,0 +1,74 @@
+.mod {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+.mod img {
+  width: 38px;
+  height: auto;
+  filter: invert(1);
+  position: absolute;
+}
+
+.chosen img,
+.notChosen img {
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 5px;
+}
+
+.chosen .hex:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid #fff900;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  position: absolute;
+  top: -15px;
+}
+
+.chosen .hex {
+  margin-top: 15px;
+  width: 52px;
+  height: 30px;
+  background-color: #fff900;
+}
+
+.chosen .hex:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -15px;
+  border-top: 15px solid #fff900;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+
+.notChosen .hex:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid #ff9933;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+  position: absolute;
+  top: -15px;
+}
+
+.notChosen .hex {
+  margin-top: 15px;
+  width: 52px;
+  height: 30px;
+  background-color: #ff9933;
+}
+
+.notChosen .hex:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -15px;
+  border-top: 15px solid #ff9933;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}

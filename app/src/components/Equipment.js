@@ -1,5 +1,6 @@
 import React from "react";
 import Tiers from "./Tiers";
+import "./Equipment.css";
 export default function Equipment(props) {
   //   console.log(props.data);
   let tiers = null;
@@ -8,10 +9,12 @@ export default function Equipment(props) {
   }
 
   return (
-    <div>
-      {props.data.name}
-      <img src={props.data.icon} alt="icon" />
-      {tiers ? <div>{tiers}</div> : null}
+    <div className="equipmentBlock">
+      <div className="equipmentHeader">
+        {props.data.name}
+        <img src={props.data.icon} alt="icon" />
+      </div>
+      {tiers ? <div className="tier">{tiers}</div> : null}
     </div>
   );
 }

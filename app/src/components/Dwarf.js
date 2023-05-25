@@ -1,5 +1,6 @@
 import React from "react";
 import Equipment from "./Equipment";
+import "./Dwarf.css";
 
 export default React.memo(function Dwarf(props) {
   function getRandomWeapons() {
@@ -12,27 +13,34 @@ export default React.memo(function Dwarf(props) {
   let { p, s, t } = getRandomWeapons();
 
   let otherEquipment = props.dwarfInfo[0].equipment.map((e) => (
-    <li key={e.name}>
+    <div>
       <Equipment data={e} />
-    </li>
+    </div>
   ));
 
   return (
-    <div>
+    <div
+      className="dwarfMain"
+      style={{
+        backgroundImage: `url(${props.dwarfInfo[0].full_body}`,
+      }}
+    >
       <h1>{props.dwarfInfo[0].name}</h1>
-      <img src={props.dwarfInfo[0].full_body} alt="test" />
-      <ul>
-        <li key="primary">
-          <Equipment data={props.dwarfInfo[0].primary[p]} />
-        </li>
-        <li key="secondary">
-          <Equipment data={props.dwarfInfo[0].secondary[s]} />
-        </li>
-        {otherEquipment}
-        <li key="throwable">
-          <Equipment data={props.dwarfInfo[0].throwables[t]} />
-        </li>
-      </ul>
+      {/* <img src={props.dwarfInfo[0].full_body} alt="test" /> */}
+      <div className="equipment">
+        <div className="side">
+          <div>
+            <Equipment data={props.dwarfInfo[0].primary[p]} />
+          </div>
+          <div>
+            <Equipment data={props.dwarfInfo[0].secondary[s]} />
+          </div>
+          <div>
+            <Equipment data={props.dwarfInfo[0].throwables[t]} />
+          </div>
+        </div>
+        <div className="side">{otherEquipment}</div>
+      </div>
     </div>
   );
 });

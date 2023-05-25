@@ -1,3 +1,93 @@
+html {
+  background-color: black;
+}
 .unselected {
   filter: brightness(50%);
+}
+/* @font-face {
+  font-family: "Danger Flight";
+  src: url("../DRG_Fonts/danger_flight/dangerflight.ttf");
+} */
+
+@font-face {
+  font-family: "Danger Flight";
+  src: url("../DRG_Fonts/danger_flight/dangerflight3d.ttf");
+}
+
+@font-face {
+  font-family: "Carbon Regular";
+  src: url("../DRG_Fonts/CarbonRegular_W00_Regular.ttf");
+}
+
+h1 {
+  font-family: "Danger Flight";
+  color: #fe4200;
+  text-align: center;
+  font-size: 50px;
+}
+h1 span {
+  /* background-color: #fff900; */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dwarfIcons img {
+  height: auto;
+  width: 65px;
+}
+
+button {
+  background-color: #fff900;
+}
+
+.top {
+  float: left;
+  border-right: 30px solid #6c6;
+  border-top: 52px solid transparent;
+  border-bottom: 52px solid transparent;
+}
+.mid {
+  float: left;
+  width: 60px;
+  height: 104px;
+  background-color: #6c6;
+}
+.bot {
+  float: left;
+  border-left: 30px solid #6c6;
+  border-top: 52px solid transparent;
+  border-bottom: 52px solid transparent;
+}
+
+.hex:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid #6c6;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  position: absolute;
+  top: -30px;
+}
+
+.hex {
+  margin-top: 30px;
+  width: 104px;
+  height: 60px;
+  background-color: #6c6;
+  position: relative;
+}
+
+.hex:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  border-top: 30px solid #6c6;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
 }
