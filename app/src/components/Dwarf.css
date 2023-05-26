@@ -15,4 +15,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 1vw;
+  background-color: #53462d;
+  border-radius: 10px;
+  padding: 20px;
 }

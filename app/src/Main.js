@@ -66,6 +66,7 @@ export default function Main() {
         </div>
       </div>
       <div>{currDwarf.length > 0 && <Dwarf dwarfInfo={currDwarf} />}</div>
+      <div className="footer">footer</div>
     </div>
   );
 }

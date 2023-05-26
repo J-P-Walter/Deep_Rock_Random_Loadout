@@ -28,18 +28,16 @@ export default React.memo(function Dwarf(props) {
       <h1>{props.dwarfInfo[0].name}</h1>
       {/* <img src={props.dwarfInfo[0].full_body} alt="test" /> */}
       <div className="equipment">
-        <div className="side">
-          <div>
-            <Equipment data={props.dwarfInfo[0].primary[p]} />
-          </div>
-          <div>
-            <Equipment data={props.dwarfInfo[0].secondary[s]} />
-          </div>
-          <div>
-            <Equipment data={props.dwarfInfo[0].throwables[t]} />
-          </div>
+        <div>
+          <Equipment data={props.dwarfInfo[0].primary[p]} />
         </div>
-        <div className="side">{otherEquipment}</div>
+        <div>
+          <Equipment data={props.dwarfInfo[0].secondary[s]} />
+        </div>
+        {otherEquipment}
+        <div>
+          <Equipment data={props.dwarfInfo[0].throwables[t]} />
+        </div>
       </div>
     </div>
   );
