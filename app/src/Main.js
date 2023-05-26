@@ -21,7 +21,11 @@ export default function Main() {
   };
 
   useEffect(() => {
-    getTotal();
+    try {
+      getTotal();
+    } catch {
+      return;
+    }
   }, []);
 
   const updateState = (d) => {
