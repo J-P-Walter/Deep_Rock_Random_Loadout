@@ -6,23 +6,44 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 15vw;
+  height: 100%;
+  width: 250px;
+  border: 1px solid #332b1d;
+  padding: 5px;
+  background-color: #53462d;
 }
 .equipmentHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 25px;
+  /* justify-content: space-around; */
+  font-size: 20px;
   text-align: center;
-  height: 20vh;
+  height: 150px;
+  width: 100%;
 }
 .equipmentHeader img {
   height: 60%;
-  width: auto;
+  /* width: 100px; */
 }
 
 .tier {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 1vh;
+}
+
+.overclock {
+  position: relative;
+  /* border: 2px solid red; */
+}
+.frame {
+  position: relative;
+  height: 100px;
+}
+.ocIcon {
+  position: absolute;
+  height: 50px;
+  top: 25px;
+  left: 25px;
 }

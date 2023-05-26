@@ -7,21 +7,30 @@ export default function Tiers(props) {
   // console.log(chosen);
   let mods = props.tier.map((m, idx) =>
     idx === chosen ? (
-      <img
-        src={m.icon}
-        alt={m.name}
-        title={`Name: ${m.name} \nEffect: ${m.effect}`}
-        style={{ backgroundColor: "#0006ff" }}
-      />
+      <div className="hex3">
+        <img
+          src={m.icon}
+          alt={m.name}
+          title={`Name: ${m.name} \nEffect: ${m.effect}`}
+          style={{ backgroundColor: "#0006ff" }}
+        />
+      </div>
     ) : (
-      <img
-        src={m.icon}
-        alt={m.name}
-        title={`Name: ${m.name} \nEffect: ${m.effect}`}
-        style={{ backgroundColor: "#0066cc" }}
-      />
+      <div className="hex3">
+        <img
+          src={m.icon}
+          alt={m.name}
+          title={`Name: ${m.name} \nEffect: ${m.effect}`}
+          style={{ backgroundColor: "#0066cc" }}
+        />
+      </div>
     )
   );
 
-  return <div className="mod">{mods}</div>;
+  return (
+    <div className="mod">
+      <h3>{chosen + 1}</h3>
+      {mods}
+    </div>
+  );
 }

@@ -2,9 +2,23 @@
   display: flex;
   flex-direction: row;
   gap: 1vw;
+  align-items: center;
 }
 .mod img {
+  padding: 5px;
   width: 45px;
   height: auto;
   filter: invert(1);
+}
+
+.hex3 {
+  -webkit-clip-path: polygon(
+    25% 5%,
+    75% 5%,
+    100% 50%,
+    75% 95%,
+    25% 95%,
+    0% 50%
+  );
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }

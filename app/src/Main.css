@@ -1,8 +1,20 @@
 html {
   /* background-color: black; */
-  background-image: url("images/dark.png");
+  background-image: url("images/darker.png");
   background-size: auto;
   background-repeat: no-repeat;
+}
+.selected.driller {
+  filter: drop-shadow(0px 0px 20px #fdfa00);
+}
+.selected.scout {
+  filter: drop-shadow(0px 0px 20px #1b5ffd);
+}
+.selected.engineer {
+  filter: drop-shadow(0px 0px 20px #ff0000);
+}
+.selected.gunner {
+  filter: drop-shadow(0px 0px 20px #6efc4e);
 }
 .unselected {
   filter: brightness(50%);
@@ -65,5 +77,5 @@ button {
 
 .footer {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
 }

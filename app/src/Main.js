@@ -39,25 +39,33 @@ export default function Main() {
         </h1>
         <div className="dwarfIcons">
           <img
-            className={dwarf.includes("driller") ? "selected" : "unselected"}
+            className={
+              dwarf.includes("driller") ? "selected driller" : "unselected"
+            }
             src="driller_icon.png"
             alt="diller_icon"
             onClick={() => updateState("driller")}
           />
           <img
-            className={dwarf.includes("scout") ? "selected" : "unselected"}
+            className={
+              dwarf.includes("scout") ? "selected scout" : "unselected"
+            }
             src="scout_icon.png"
             alt="scout_icon"
             onClick={() => updateState("scout")}
           />
           <img
-            className={dwarf.includes("engineer") ? "selected" : "unselected"}
+            className={
+              dwarf.includes("engineer") ? "selected engineer" : "unselected"
+            }
             src="engineer_icon.png"
             alt="engineer_icon"
             onClick={() => updateState("engineer")}
           />
           <img
-            className={dwarf.includes("gunner") ? "selected" : "unselected"}
+            className={
+              dwarf.includes("gunner") ? "selected gunner" : "unselected"
+            }
             src="gunner_icon.png"
             alt="gunner_icon"
             onClick={() => updateState("gunner")}
