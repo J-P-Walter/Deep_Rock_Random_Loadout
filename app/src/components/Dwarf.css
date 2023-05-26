@@ -2,6 +2,7 @@
   background-repeat: no-repeat;
   background-size: 12%;
   font-family: "Carbon Regular";
+  overflow: hidden;
 }
 .side {
   /* border: 1px;
@@ -16,4 +17,14 @@
   justify-content: center;
   /* background-color: #53462d; */
   /* border-radius: 10px; */
+}
+
+.portrait {
+  position: absolute;
+  z-index: -1;
+  width: 25%;
+  top: 50px;
+  /* left: 5vw; */
+  /* transform: scaleX(-1); */
+  filter: opacity(75%);
 }

@@ -70,11 +70,21 @@ export default function Main() {
             alt="gunner_icon"
             onClick={() => updateState("gunner")}
           />
-          <button onClick={getDwarfInfo}>Generate Loadout</button>
         </div>
+        <button
+          onClick={getDwarfInfo}
+          className="button-3"
+          disabled={dwarf.length === 0}
+        >
+          Generate Loadout
+        </button>
       </div>
       <div>{currDwarf.length > 0 && <Dwarf dwarfInfo={currDwarf} />}</div>
       <div className="footer">footer</div>
     </div>
   );
+}
+
+{
+  /* <button class="button-3" role="button">Generate Loadout</button> */
 }

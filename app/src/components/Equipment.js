@@ -13,7 +13,6 @@ export default function Equipment(props) {
   }
 
   if (props.data.overclocks) {
-    console.log(props.data.overclocks);
     let o = Math.floor(Math.random() * props.data.overclocks.length);
     let oc = props.data.overclocks[o];
     overclock = (

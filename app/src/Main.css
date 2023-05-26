@@ -37,12 +37,12 @@ html {
 h1 {
   font-family: "Danger Flight";
   text-align: center;
-  font-size: 50px;
+  font-size: 45px;
 }
 h1 span {
-  animation: neon 3s infinite;
-
-  filter: drop-shadow(0px, 0px, 5px, #fff900);
+  /* box-shadow: inset 0px 33px 25px 0 #ff9933, inset 0 99px 5px 0px #fff900, inset 0px 33px 25px 0 #ff9933 */
+  /* color: #ff9933; */
+  filter: drop-shadow(0px 5px 10px #fff900) drop-shadow(0px -5px 10px #ff9933);
 }
 
 .header {
@@ -59,23 +59,64 @@ h1 span {
   width: 60px;
 }
 
-button {
-  background-color: black;
-  font-family: "Carbon Regular";
-  backface-visibility: hidden;
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  white-space: nowrap;
-  border-color: #111;
-  color: white;
-  background: linear-gradient(180deg, #555 0%, #222 49%, #000 51%, #222 100%);
-  border-radius: 5px;
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5),
-    0px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
 .footer {
   position: absolute;
-  /* bottom: 0; */
+  bottom: 0;
 }
+
+.button-3 {
+  appearance: none;
+  background-color: black;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Carbon Regular";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: white;
+  color: black;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  /* background-color: #94d3a2; */
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+.button-3:disabled:hover {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* .button-3:active {
+  background-color: #ff9933;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+} */

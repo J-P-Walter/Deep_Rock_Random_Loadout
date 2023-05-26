@@ -17,16 +17,15 @@ export default React.memo(function Dwarf(props) {
       <Equipment data={e} />
     </div>
   ));
-
+  console.log(props.dwarfInfo);
   return (
-    <div
-      className="dwarfMain"
-      style={{
-        backgroundImage: `url(${props.dwarfInfo[0].full_body}`,
-      }}
-    >
+    <div className="dwarfMain">
       <h1>{props.dwarfInfo[0].name}</h1>
-      {/* <img src={props.dwarfInfo[0].full_body} alt="test" /> */}
+      <img
+        src={props.dwarfInfo[0].full_body}
+        alt="portrait"
+        className="portrait"
+      ></img>
       <div className="equipment">
         <div>
           <Equipment data={props.dwarfInfo[0].primary[p]} />
