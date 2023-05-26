@@ -11,14 +11,14 @@ export default function Tiers(props) {
         src={m.icon}
         alt={m.name}
         title={`Name: ${m.name} \nEffect: ${m.effect}`}
-        // style={{ backgroundColor: "#0006ff" }}
+        style={{ backgroundColor: "#0006ff" }}
       />
     ) : (
       <img
         src={m.icon}
         alt={m.name}
         title={`Name: ${m.name} \nEffect: ${m.effect}`}
-        // style={{ backgroundColor: "#0066cc" }}
+        style={{ backgroundColor: "#0066cc" }}
       />
     )
   );
