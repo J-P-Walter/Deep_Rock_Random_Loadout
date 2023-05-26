@@ -3,8 +3,6 @@ import "./Tiers.css";
 
 export default function Tiers(props) {
   let chosen = Math.floor(Math.random() * props.tier.length);
-  // console.log(props);
-  // console.log(chosen);
   let mods = props.tier.map((m, idx) =>
     idx === chosen ? (
       <div className="hex3">

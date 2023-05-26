@@ -29,6 +29,16 @@ router.get("/engineer", async (req, res) => {
   res.send(results).status(200);
 });
 
+router.get("/total", async (req, res) => {
+  let collection = db.collection("totalGenerations");
+  let results = await collection.find({}).toArray();
+  res.send(results).status(200);
+});
+
+router.get("/add", async (req, res) => {
+  db.collection("totalGenerations").updateOne({}, { $inc: { total: 1 } });
+});
+
 // // This section will help you get a single record by id
 // router.get("/:id", async (req, res) => {
 //   let collection = await db.collection("records");

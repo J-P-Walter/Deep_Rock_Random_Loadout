@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Main.css";
 import Dwarf from "./components/Dwarf";
 
@@ -10,7 +10,19 @@ export default function Main() {
     "scout",
   ]);
 
+  const [total, setTotal] = React.useState(0);
+
   const [currDwarf, setCurrDwarf] = React.useState([]);
+
+  const getTotal = async () => {
+    const res = await fetch("http://localhost:5050/total");
+    let data = await res.json();
+    setTotal(data[0].total);
+  };
+
+  useEffect(() => {
+    getTotal();
+  }, []);
 
   const updateState = (d) => {
     if (dwarf.includes(d)) {
@@ -29,6 +41,8 @@ export default function Main() {
     const res = await fetch(`http://localhost:5050/${dwarf[idx]}`);
     const data = await res.json();
     setCurrDwarf(data);
+
+    fetch("http://localhost:5050/add");
   };
 
   return (
@@ -78,13 +92,15 @@ export default function Main() {
         >
           Generate Loadout
         </button>
+        Total loadouts created: {total}
       </div>
       <div>{currDwarf.length > 0 && <Dwarf dwarfInfo={currDwarf} />}</div>
-      <div className="footer">footer</div>
+      <div className="footer">
+        <p className="feedback">
+          Have feedback? Send me an email at <i>j.p.walter@outlook.com</i>{" "}
+          &emsp; Feeling generous? Buy me a coffee! Venmo: <i>@JpWeim</i>
+        </p>
+      </div>
     </div>
   );
-}
-
-{
-  /* <button class="button-3" role="button">Generate Loadout</button> */
 }

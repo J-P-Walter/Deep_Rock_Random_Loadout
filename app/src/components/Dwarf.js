@@ -17,7 +17,7 @@ export default React.memo(function Dwarf(props) {
       <Equipment data={e} />
     </div>
   ));
-  console.log(props.dwarfInfo);
+
   return (
     <div className="dwarfMain">
       <h1>{props.dwarfInfo[0].name}</h1>

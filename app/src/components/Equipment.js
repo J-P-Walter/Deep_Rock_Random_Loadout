@@ -2,10 +2,7 @@ import React from "react";
 import Tiers from "./Tiers";
 import "./Equipment.css";
 export default function Equipment(props) {
-  //   console.log(props.data);
   let tiers = null;
-  let frame = null;
-  let ocIcon = null;
   let overclock = null;
 
   if (props.data.modifications !== undefined) {

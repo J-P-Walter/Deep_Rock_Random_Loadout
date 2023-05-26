@@ -19,10 +19,6 @@ html {
 .unselected {
   filter: brightness(50%);
 }
-/* @font-face {
-  font-family: "Danger Flight";
-  src: url("../DRG_Fonts/danger_flight/dangerflight.ttf");
-} */
 
 @font-face {
   font-family: "Danger Flight";
@@ -49,6 +45,8 @@ h1 span {
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: "Carbon Regular";
+  font-size: 17px;
 }
 .dwarfIcons {
   display: flex;
@@ -60,8 +58,11 @@ h1 span {
 }
 
 .footer {
-  position: absolute;
+  text-align: center;
+  position: sticky;
   bottom: 0;
+  font-family: "Carbon Regular";
+  font-size: 18px;
 }
 
 .button-3 {
@@ -115,8 +116,3 @@ h1 span {
   background-color: black;
   color: rgba(255, 255, 255, 0.8);
 }
-
-/* .button-3:active {
-  background-color: #ff9933;
-  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
-} */
