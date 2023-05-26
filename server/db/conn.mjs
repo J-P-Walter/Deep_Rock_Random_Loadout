@@ -1,8 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const dev_db_url =
-  "mongodb+srv://JpWeim:Dutchiscool1@drg.rpkfbyn.mongodb.net/?retryWrites=true&w=majority";
-const connectionString = process.env.ATLAS_URI || dev_db_url;
+const connectionString = process.env.ATLAS_URI || "";
 
 const client = new MongoClient(connectionString);
 
