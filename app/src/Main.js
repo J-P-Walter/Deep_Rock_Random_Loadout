@@ -15,7 +15,9 @@ export default function Main() {
   const [currDwarf, setCurrDwarf] = React.useState([]);
 
   const getTotal = async () => {
-    const res = await fetch("http://localhost:5050/total");
+    const res = await fetch(
+      "https://deep-rock-random-loadout.onrender.com/total"
+    );
     let data = await res.json();
     setTotal(data[0].total);
   };
@@ -42,11 +44,13 @@ export default function Main() {
     }
     let idx = Math.floor(Math.random() * dwarf.length);
 
-    const res = await fetch(`http://localhost:5050/${dwarf[idx]}`);
+    const res = await fetch(
+      `https://deep-rock-random-loadout.onrender.com/${dwarf[idx]}`
+    );
     const data = await res.json();
     setCurrDwarf(data);
 
-    fetch("http://localhost:5050/add");
+    fetch("https://deep-rock-random-loadout.onrender.com/add");
   };
 
   return (
